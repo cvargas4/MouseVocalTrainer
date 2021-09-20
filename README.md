@@ -51,8 +51,9 @@ Note: The Jetson  Nano does not naitively have WiFi capabilities so you'll need 
 5) Install pyaudio (no idea why, but some part of the process for installing torch and torchvision makes this installation really smooth. I constantly had issues when I would try  installing it with the other dependencies).
 
    `pip install PyAudio`
-6a) Edit `main_live.py` to provide outputs via the Jetson Nano GPIO.
-6b) You can also change the `mid_buffer_size` which is the amount of time AMVOC will stream audio data to process (i.e. a value of `750ms` means AMVOC will process 750ms of data at a time - with some overlap between chunks built-in). 750ms was chosen to maximize detection accuracy but this can be changed as desired.
+6) Edit `main_live.py` to provide outputs via the Jetson Nano GPIO.
 8) Using Terminal run `python3 main_live.py' to get going!
 
 When running `main_live.py` it will prompt you to enter the sampling frequency you want to use (this will depend on your microphones capabilities). Next you'll see a list of the available audio devices, simply type the index of the microphone you'd like to use. As soon as you hit `enter` the script will start and will begin sampling audio to detect USVs!
+
+Note: You can also change the `mid_buffer_size` which is the amount of time AMVOC will stream audio data to process (i.e. a value of `0.75` means AMVOC will process 750ms of data at a time - with some overlap between chunks built-in). 750ms was chosen to maximize detection accuracy but this can be changed as desired.
