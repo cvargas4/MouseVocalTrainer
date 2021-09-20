@@ -15,7 +15,7 @@ Of course MVT can be used with non-food rewards like sugar  water, chocolate, et
 
 A major goal of this project as well has been to make it open source and low-cost. The most expensive component used in our set up is the ultrasonic microphone (Ultramic 384K BLE). At ~$400, this microphone is still cheaper than almost any other avilable ultrasonic microphone. Considering it's a USB microphone, it also provides the easies user experience compared to many that require boards form NIDAQ or expensive hardware ecosystems from Avisoft. As it's currently  designed, MVA currently costs about ~$1000.
 
-# Set up and Materials
+# Materials and Set Up
 
 ## Materials
 All prices converted to USD
@@ -31,5 +31,28 @@ All prices converted to USD
 
 The camera is optional for the basic goals and function of this project, but it certianly can be be useful. We run it off a desktop so as not to interfere with audio processing from AMVOC. In our case it also facilitates monitoring the health of the animals in addition to monitoring their behavior.
 
-## Other Components
+### Other Components
 Please see the "Designs" folder for .stl files for 3D printed components (screen and Jetson Nano holder, and camera holder), and .ai files for laser cutting plans for the home cage set-up.
+
+## AMVOC Set Up
+For the NVIDIA Jetson Nano, it's a bit tricky but it works out fairly well and all dependancies can be installed.
+Installation and code execution is done through Terminal
+Note: The Jetson  Nano does not naitively have WiFi capabilities so you'll need an Ethernet connection or buy the WiFi adapter.
+1) Install AMVOC
+
+   `git clone https://github.com/tyiannak/amvoc`
+
+2) In the requirements.txt file, comment out torch, torchvision, pyaudio, and umap
+3) cd to AMVOC folder and install requirements
+
+   `pip3 install -r requirements.txt`
+
+4) [Follow instrucitons from Q-engineering for installing torch and torchvision](https://qengineering.eu/install-pytorch-on-jetson-nano.html) (**ensure versions are compatible**)
+5) Install pyaudio (no idea why, but some part of the process for installing torch and torchvision makes this installation really smooth. I constantly had issues when I would try  installing it with the other dependencies).
+
+   `pip install PyAudio`
+6a) Edit `main_live.py` to provide outputs via the Jetson Nano GPIO.
+6b) You can also change the `mid_buffer_size` which is the amount of time AMVOC will stream audio data to process (i.e. a value of `750ms` means AMVOC will process 750ms of data at a time - with some overlap between chunks built-in). 750ms was chosen to maximize detection accuracy but this can be changed as desired.
+8) Using Terminal run `python3 main_live.py' to get going!
+
+When running `main_live.py` it will prompt you to enter the sampling frequency you want to use (this will depend on your microphones capabilities). Next you'll see a list of the available audio devices, simply type the index of the microphone you'd like to use. As soon as you hit `enter` the script will start and will begin sampling audio to detect USVs!
