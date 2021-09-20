@@ -9,7 +9,7 @@ Signficant parts of this project have been tied in from various sources and are 
 [AMVOC]((https://github.com/tyiannak/amvoc)) is a collaboration between the Jarvis Lab and the [Multimedia Analysis Group](https://labs-repos.iit.demokritos.gr/MagCIL/about.html) at NCSR-Demoktritos headed by [Dr. Theodoros Giannakopoulos](https://tyiannak.github.io/). AMVOC provides several functionalities for researchers studying ultrasonic vocalizations (USVs), one of which is the ability to detect USVs in real time. More information can be found in our [preprint on BioRxiv](https://www.biorxiv.org/content/10.1101/2021.08.13.456283v1)
 
 **2) FED - Feeding Experimental Device**
-[FED](https://github.com/KravitzLabDevices/FED3) is a project out of the Kravitz lab at WashU-St. Louis. Because it is Arduino-based, the FED is a great low-cost tool to customizing any part of an experiment that requires pellet delivery as part of the experimental design. The version of the FED code that I have modified and used in this project is **here**.
+[FED](https://github.com/KravitzLabDevices/FED3) is a project out of the [Kravitz lab](https://kravitzlab.com/) at WashU-St. Louis. Because it is Arduino-based, the FED is a great low-cost tool to customizing any part of an experiment that requires pellet delivery as part of the experimental design. The version of the FED code that I have modified and used in this project is **here**.
 
 Of course MVT can be used with non-food rewards like sugar  water, chocolate, etc., but I just haven't gotten around to trying other things. The FED simply receives a trigger signal when a USV is detected by AMVOC, so the device receiving the trigger really be anything you want/need in your set up.
 
