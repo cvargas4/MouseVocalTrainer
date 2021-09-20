@@ -13,7 +13,7 @@ Signficant parts of this project have been tied in from various sources and are 
 
 Of course MVT can be used with non-food rewards like sugar  water, chocolate, etc., but I just haven't gotten around to trying other things. The FED simply receives a trigger signal when a USV is detected by AMVOC, so the device receiving the trigger really be anything you want/need in your set up.
 
-A major goal of this project as well has been to make it open source and low-cost. The most expensive component used in our set up is the ultrasonic microphone (Ultramic 384K BLE). At ~$400, this microphone is still cheaper than almost any other avilable ultrasonic microphone. Considering it's a USB microphone, it also provides the easies user experience compared to many that require boards form NIDAQ or expensive hardware ecosystems from Avisoft.
+A major goal of this project as well has been to make it open source and low-cost. The most expensive component used in our set up is the ultrasonic microphone (Ultramic 384K BLE). At ~$400, this microphone is still cheaper than almost any other avilable ultrasonic microphone. Considering it's a USB microphone, it also provides the easies user experience compared to many that require boards form NIDAQ or expensive hardware ecosystems from Avisoft. As it's currently  designed, MVA currently costs about ~$1000.
 
 # Set up and Materials
 
