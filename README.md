@@ -57,3 +57,6 @@ Note: The Jetson  Nano does not naitively have WiFi capabilities so you'll need 
 When running `main_live.py` it will prompt you to enter the sampling frequency you want to use (this will depend on your microphones capabilities). Next you'll see a list of the available audio devices, simply type the index of the microphone you'd like to use. As soon as you hit `enter` the script will start and will begin sampling audio to detect USVs!
 
 Note: You can also change the `mid_buffer_size` which is the amount of time AMVOC will stream audio data to process (i.e. a value of `0.75` means AMVOC will process 750ms of data at a time - with some overlap between chunks built-in). 750ms was chosen to maximize detection accuracy but this can be changed as desired.
+
+## Basic Layout of Equipment
+![Equipment layout](https://github.com/cvargas4/MouseVocalTrainer/blob/main/Images/RT-VCR_Schematic.png)
