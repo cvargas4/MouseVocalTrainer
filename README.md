@@ -1,5 +1,5 @@
-# RT-VCR
-Real Time Vocal Conditioning Regimen: A hardware-software suite used to classically condition vocal usage and vocal modification by an animal
+# MVT
+Mouse Vocal  Trainer: A hardware-software suite used to classically condition vocal usage and vocal modification by an animal
 
 This project aims to develope a system in which mice (or other animals) could be trained to modify their vocal behavior for a food reward. By adapting innate vocal behaviors in this functional manner, one could explore vocal usage learning or vocal production learning (Petkov and Jarvis, 2012) in a species of interest.
 
