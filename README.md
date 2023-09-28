@@ -35,7 +35,7 @@ The camera is optional for the basic goals and function of this project, but it 
 Please see the "Designs" folder for .stl files for 3D printed components (screen and Jetson Nano holder, and camera holder), and .ai files for laser cutting plans for the home cage set-up.
 
 ## AMVOC Set Up
-For the NVIDIA Jetson Nano, it's a bit tricky but it works out fairly well and all dependancies can be installed.
+For the NVIDIA Jetson Nano, it's a bit tricky but it works out fairly well and all dependancies can be installed. We would also recommed ensuring that you use Python 3.7 as that is what was used to develop this system. Not all libraries play nice if your python3 is below or above (at the dat of writing this September, 2023).
 Installation and code execution is done through Terminal
 Note: The Jetson  Nano does not naitively have WiFi capabilities so you'll need an Ethernet connection or buy the WiFi adapter.
 1) Install AMVOC
@@ -59,4 +59,4 @@ When running `main_live.py` it will prompt you to enter the sampling frequency y
 Note: You can also change the `mid_buffer_size` which is the amount of time AMVOC will stream audio data to process (i.e. a value of `0.75` means AMVOC will process 750ms of data at a time - with some overlap between chunks built-in). 750ms was chosen to maximize detection accuracy but this can be changed as desired.
 
 ## Basic Layout of Equipment
-![Equipment layout](https://github.com/cvargas4/MouseVocalTrainer/blob/main/Images/RT-VCR_Schematic.png)
+![Equipment layout](https://github.com/cvargas4/MouseVocalTrainer/blob/main/Images/MVT_Schematic_v2.png)
